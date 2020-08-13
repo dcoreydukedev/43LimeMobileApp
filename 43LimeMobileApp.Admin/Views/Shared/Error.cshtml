@@ -1,0 +1,33 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "Error";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">&nbsp;</div>
+        <div class="col-10">
+
+            <h2 class="text-danger my-4">An error occurred while processing your request.</h2>
+
+            <h4 class="text-info my-4">
+                Timestamp: @DateTime.Now.ToString()
+            </h4>
+
+            <h4 class="text-info my-4">
+                Controller: @Model.ControllerName.ToString()
+            </h4>
+
+            <h4 class="text-info my-4">
+                Action: @Model.ActionName.ToString()
+            </h4>
+
+            <p class="text-danger my-4 font-small">
+                Error: @Model.Exception.ToString()
+            </p>
+
+            <br />
+        </div>
+    </div>
+</div>

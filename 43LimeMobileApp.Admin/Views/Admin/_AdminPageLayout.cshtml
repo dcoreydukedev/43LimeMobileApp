@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@section CSS
+{
+    <link href="~/Styles/AdminIndex.css" rel="stylesheet" />
+}
+
+@section JS
+{
+    <script src="~/Scripts/AdminIndex.js"></script>
+}
+
+
+<div id="main-container" class="container-fluid bg-dark text-center mx-0 my-0 px-2 py-2 bg-dark" style="text-align: center; vertical-align: middle;">
+
+    @RenderBody()
+
+</div>
+
+<!-- Load Spinner -->
+<div id="preloader"></div>
+
+@RenderSection("Scripts", required: false)

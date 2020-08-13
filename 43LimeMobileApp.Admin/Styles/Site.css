@@ -1,0 +1,134 @@
+﻿.btn-primary, .btn-primary:hover {
+    color: #436705;
+    color: rgba(67, 103, 5, 0.98);
+    border-color: transparent;
+}
+
+.color-black, .text-black {
+    color: #000000;
+    color: rgba(0, 0, 0, 0.98);
+}
+
+.color-green, .text-green {
+    color: #436705;
+    color: rgba(67, 103, 5, 0.98)
+}
+
+.color-red, .text-red {
+    color: #f50000;
+    color: rgba(245, 0, 0, 0.75)
+}
+
+.color-blue, .text-blue {
+    color: #23608D;
+    color: rgba(35, 96, 141, 0.98)
+}
+
+.color-white, .text-white {
+    color: #ffffff;
+    color: rgba(255, 255, 255, 0.75)
+}
+
+/* Nav Bar */
+.navbar {
+    transition: all 0.4s;
+}
+
+    .navbar .nav-link {
+        color: #fff;
+    }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link:focus {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+    .navbar .navbar-brand {
+        color: rgba(67, 103, 5, 0.98);
+        font-size: 2.5rem;
+        font-weight: bold;
+        float: left;
+        text-align: left;
+    }
+
+    /* Change navbar styling on scroll */
+    .navbar.active {
+        background: #fff;
+        box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+        .navbar.active .nav-link {
+            color: #555;
+        }
+
+            .navbar.active .nav-link:hover,
+            .navbar.active .nav-link:focus {
+                color: #555;
+                text-decoration: none;
+            }
+
+        .navbar.active .navbar-brand {
+            color: #555;
+        }
+
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+    .navbar {
+        background: #fff;
+    }
+
+        .navbar .navbar-brand, .navbar .nav-link {
+            color: #555;
+        }
+}
+/* Preloader */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #fff;
+}
+
+    #preloader:before {
+        content: "";
+        position: fixed;
+        top: calc(50% - 30px);
+        left: calc(50% - 30px);
+        border: 6px solid #f2f2f2;
+        border-top: 6px solid rgba(67, 103, 5, 0.98);
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        -webkit-animation: animate-preloader 1s linear infinite;
+        animation: animate-preloader 1s linear infinite;
+    }
+
+@-webkit-keyframes animate-preloader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-preloader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

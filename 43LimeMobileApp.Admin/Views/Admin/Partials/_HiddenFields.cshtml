@@ -1,0 +1,25 @@
+﻿@model AdminViewModel
+
+@{
+
+    if (Model.Token.TokenType == AppAuthTokenType.Authenticated)
+    {
+        @Html.HiddenFor(m => m.Token.Id)
+        @Html.HiddenFor(m => m.Token.User.UserId)
+        @Html.HiddenFor(m => m.Token.User.Username)
+        @Html.HiddenFor(m => m.Token.User.RoleId)
+        @Html.HiddenFor(m => m.Token.User.IsActive)
+        @Html.HiddenFor(m => m.Token.User.IsOnline)
+        @Html.HiddenFor(m => m.Token.Role.Id)
+        @Html.HiddenFor(m => m.Token.Role.RoleName)
+        @Html.HiddenFor(m => m.Token.LoginTime)
+        @Html.HiddenFor(m => m.Token.LogoutTime)
+
+        foreach(KeyValuePair<string, object> kvp in Model.Data)
+        {
+            @Html.Hidden(kvp.Key, kvp.Value)
+        }
+
+    }
+
+}
