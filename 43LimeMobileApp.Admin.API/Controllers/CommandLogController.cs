@@ -93,20 +93,37 @@ namespace _43LimeMobileApp.Admin.API.Controllers
         /// <summary>
         /// Get All CommandLog Records
         /// </summary>
-        [Route("Get")]
+        [Route("Get/{userId?}")]
         [HttpGet]
-        public IHttpActionResult Get()
+        public IHttpActionResult Get(string userId)
         {
-            try
+            if(string.IsNullOrEmpty(userId))
             {
-                List<CommandLog> l = commandLogService.GetCommandLogs();
-                return Ok(l);
+                try
+                {
+                    List<CommandLog> l = commandLogService.GetCommandLogs();
+                    return Ok(l);
+                }
+                catch (Exception ex)
+                {
+                    LogError("CommandLog", "GET:Get", ex);
+                    return InternalServerError(ex);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                LogError("CommandLog", "GET:Get", ex);
-                return InternalServerError(ex);
+                try
+                {
+                    List<CommandLog> l = commandLogService.GetCommandLogs(userId);
+                    return Ok(l);
+                }
+                catch (Exception ex)
+                {
+                    LogError("CommandLog", "GET:Get", ex);
+                    return InternalServerError(ex);
+                }
             }
+            
         }
 
         /// <summary>
