@@ -14,7 +14,7 @@ namespace _43LimeMobileApp.Admin.API.Controllers
     /// User API Controller
     /// </summary>
     /// <seealso cref="_43LimeMobileApp.Admin.API.Controllers.ApiControllerBase" />
-    [RoutePrefix("/api/Users")]
+    [RoutePrefix("api/Users")]
     public class UsersController : ApiControllerBase
     {
 

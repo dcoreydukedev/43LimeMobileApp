@@ -9,8 +9,15 @@ using System.Web.Routing;
 
 namespace _43LimeMobileApp.Admin.API
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="System.Web.HttpApplication" />
     public class WebApiApplication : System.Web.HttpApplication
     {
+        /// <summary>
+        /// Applications the start.
+        /// </summary>
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();

@@ -14,7 +14,7 @@ namespace _43LimeMobileApp.Admin.API.Controllers
     /// Roles Api Controller
     /// </summary>
     /// <seealso cref="_43LimeMobileApp.Admin.API.Controllers.ApiControllerBase" />
-    [RoutePrefix("/api/Roles")]
+    [RoutePrefix("api/Roles")]
     public class RolesController : ApiControllerBase
     {
 
