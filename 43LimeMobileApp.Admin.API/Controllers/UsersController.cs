@@ -36,7 +36,7 @@ namespace _43LimeMobileApp.Admin.API.Controllers
         /// <param name="userId">The user identifier.</param>
         [HttpGet]
         [Route("Get/{userId:length(4)?}")]
-        public IHttpActionResult Get(string userId)
+        public IHttpActionResult Get(string? userId)
         {
             if (string.IsNullOrEmpty(userId))
             {
