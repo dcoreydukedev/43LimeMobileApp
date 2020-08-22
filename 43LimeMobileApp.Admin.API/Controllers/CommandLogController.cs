@@ -95,7 +95,7 @@ namespace _43LimeMobileApp.Admin.API.Controllers
         /// </summary>
         [Route("Get/{userId?}")]
         [HttpGet]
-        public IHttpActionResult Get(string userId)
+        public IHttpActionResult Get(string? userId)
         {
             if(string.IsNullOrEmpty(userId))
             {
