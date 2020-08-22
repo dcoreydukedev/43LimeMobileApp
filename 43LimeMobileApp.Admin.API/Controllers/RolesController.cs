@@ -35,7 +35,7 @@ namespace _43LimeMobileApp.Admin.API.Controllers
         /// <param name="roleName">Name of the role.</param>
         [HttpGet]
         [Route("Get/{roleName?}")]
-        public IHttpActionResult Get(string roleName)
+        public IHttpActionResult Get(string? roleName)
         {
             if (string.IsNullOrEmpty(roleName))
             {
